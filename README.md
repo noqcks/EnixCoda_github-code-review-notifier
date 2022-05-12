@@ -1,17 +1,16 @@
 # GitHub Reviewer Notifier on Slack
 
-  **⚠️ If you are here because this app stopped working, please replace the `now.sh` with `vercel.app` in your webhook URL.**
-  |From|To|
-  |---|---|
-  |<span>https://<span>github-code-review-notifier.**now.sh**/github?workspace=XXX|<span>https://<span>github-code-review-notifier.**vercel.app**/github?workspace=XXX|
+**⚠️ If you are here because this app stopped working, please replace the `now.sh` with `vercel.app` in your webhook URL.**
 
+```diff
+-https://<span>github-code-review-notifier.now.sh/github?workspace=XXX
++https://<span>github-code-review-notifier.vercel.app/github?workspace=XXX
+```
 ---
 
-When requested to review pull request on GitHub or when your pull request has been approved, you will be notified on Slack immediately! And a direct link to the Pull Request will be provided in the message.
+When requested to review pull request on GitHub or when your pull request has been approved, you will be notified on Slack immediately! And a direct link to the Pull Request will be provided in the message. For example,
 
-## A picture is worths a thousand words
-
-![](https://user-images.githubusercontent.com/7480839/56017581-4fcb9200-5d32-11e9-93dc-bd9f3b25a4d0.png)
+![A picture is worths a thousand words](https://user-images.githubusercontent.com/7480839/56017581-4fcb9200-5d32-11e9-93dc-bd9f3b25a4d0.png)
 
 ## Setup
 
@@ -37,6 +36,11 @@ You can click `Setup GitHub projects` in the menu to get a webhook for connectin
 - The events sent to it should at least include `Pull requests` and `Pull request reviews`. Or `Send me everything` for easier setup.
 - The URL is bound to the workspace. And multiple projects can share one URL in one Slack workspace.
 
+## TODO
+- Notify users mentioned in new comment messages
+- Notify all users in a review thread when it got reply
+- Notify author about all rest messages
+
 ## Help
 
-Need more help? [Draft an issue](https://github.com/EnixCoda/github-code-review-notifier/issues) or [email me](mailto:enixcoda@gmail.com).
+Need help? [Draft an issue](https://github.com/EnixCoda/github-code-review-notifier/issues).

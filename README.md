@@ -3,8 +3,8 @@
 **⚠️ If you are here because this app stopped working, please replace the `now.sh` with `vercel.app` in your webhook URL.**
 
 ```diff
--https://<span>github-code-review-notifier.now.sh/github?workspace=XXX
-+https://<span>github-code-review-notifier.vercel.app/github?workspace=XXX
+-https://github-code-review-notifier.now.sh/github?workspace=XXX
++https://github-code-review-notifier.vercel.app/github?workspace=XXX
 ```
 ---
 

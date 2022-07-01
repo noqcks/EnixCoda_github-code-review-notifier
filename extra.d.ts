@@ -1,5 +1,5 @@
-import { NowRequest, NowResponse } from '@now/node'
+import { VercelRequest, VercelResponse } from '@vercel/node'
 
-export type IncomingMessage = NowRequest
+export type IncomingMessage = VercelRequest
 
-export type RequestListener = (req: NowRequest, res: NowResponse) => void
+export type RequestListener = (req: VercelRequest, res: VercelResponse) => void

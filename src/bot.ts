@@ -1,5 +1,5 @@
 import * as Slack from 'slack'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 import { paths } from '../api/paths'
 import { getURL, RouteHandler } from './'
 import { clientID, clientSecret, verificationToken } from './config'

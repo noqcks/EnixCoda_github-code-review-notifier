@@ -10,18 +10,21 @@
   "author": "EnixCoda",
   "license": "ISC",
   "dependencies": {
-    "@now/node": "^1.0.0",
-    "@sentry/node": "^5.7.1",
+    "@sentry/node": "^7.3.1",
     "@types/http-proxy": "^1.17.0",
-    "@types/uuid": "^3.4.5",
-    "firebase": "^8.4.2",
+    "@types/uuid": "^8.3.4",
+    "@vercel/node": "^2.3.3",
+    "firebase": "^9.8.4",
     "http-proxy": "^1.17.0",
     "slack": "^11.0.2",
-    "typescript": "^3.6.4",
-    "uuid": "^3.3.2"
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@sentry/cli": "^1.48.0"
+    "@sentry/cli": "^2.2.0",
+    "@types/glob": "^7.2.0",
+    "@vercel/frameworks": "^1.0.2",
+    "vercel": "^25.2.2"
   },
   "prettier": {
     "printWidth": 100,

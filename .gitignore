@@ -1,7 +1,7 @@
 .vscode
 .DS_Store
 node_modules
-now-secrets.json
+vercel-secrets.json
 build
 
 .env

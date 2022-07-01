@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase/compat'
 import { firebaseConfig } from './config'
 import { dePromiseLike } from './utils'
 
@@ -31,9 +31,7 @@ async function get<T>(path: RefPath) {
 }
 
 function find(path: RefPath, key: string, value: string | number | boolean | null) {
-  return getRef(path)
-    .orderByChild(key)
-    .equalTo(value)
+  return getRef(path).orderByChild(key).equalTo(value)
 }
 
 // database model helpers
@@ -49,8 +47,8 @@ const keys = {
 const paths: {
   [key: string]: (seed: string) => string
 } = {
-  registered: workspace => `${keys.registered}/${workspace}`,
-  link: workspace => `${keys.link}/${workspace}`,
+  registered: (workspace) => `${keys.registered}/${workspace}`,
+  link: (workspace) => `${keys.link}/${workspace}`,
 }
 
 // business logics
@@ -84,7 +82,7 @@ export async function removeLink(
   const snapshot = await query.limitToFirst(1).once('value')
   if (snapshot.exists()) {
     const promisesOfRemove: Promise<ExpectedAny>[] = []
-    snapshot.forEach(child => {
+    snapshot.forEach((child) => {
       promisesOfRemove.push(child.ref.remove())
     })
     return Promise.all(promisesOfRemove)

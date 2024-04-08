@@ -85,7 +85,7 @@ export async function removeLink(
   const snapshot = await query.limitToFirst(1).once('value')
   if (snapshot.exists()) {
     const promisesOfRemove: Promise<ExpectedAny>[] = []
-    snapshot.forEach(child => {
+    snapshot.forEach((child: firebase.database.DataSnapshot) => {
       promisesOfRemove.push(child.ref.remove())
     })
     return Promise.all(promisesOfRemove)
